@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ulangan Harian – Hubungan Antar Sudut (Kelas 8)</title>
+<style>
+:root{--bg:#f6f7fb;--fg:#1b2130;--mu:#5a6478;--cd:#fff;--bd:#dce0ea;--p:#2563eb;--q:#ea580c;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12151c;--fg:#e8ecf5;--mu:#9aa4b8;--cd:#1b2030;--bd:#2c3347;--p:#60a5fa;--q:#fb923c;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#12151c;--fg:#e8ecf5;--mu:#9aa4b8;--cd:#1b2030;--bd:#2c3347;--p:#60a5fa;--q:#fb923c;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:640px;margin:0 auto;padding:18px 16px 40px}
+h1{font-size:1.4rem;margin:0 0 4px}.mu{color:var(--mu)}
+.card{background:var(--cd);border:1px solid var(--bd);border-radius:12px;padding:12px 14px;margin:10px 0}
+button{font:inherit;border:1px solid var(--bd);background:var(--cd);color:var(--fg);padding:10px 14px;border-radius:10px;cursor:pointer}
+button.go{background:var(--p);border-color:var(--p);color:#fff;font-weight:600;width:100%}
+input{font:inherit;width:100%;box-sizing:border-box;padding:10px;border-radius:10px;border:1px solid var(--bd);background:var(--cd);color:var(--fg)}
+.bar{display:flex;justify-content:space-between;align-items:center;font-weight:700;margin-bottom:8px}
+#tmr{background:var(--q);color:#fff;border-radius:8px;padding:2px 10px}
+#wr{position:relative}
+svg{width:100%;height:auto;background:var(--cd);border:1px solid var(--bd);border-radius:14px;touch-action:none;display:block}
+.ln{stroke:var(--fg);stroke-width:2.5;stroke-linecap:round}.sq{stroke:var(--mu);fill:none;stroke-width:1.5}
+.s1{fill:var(--p);stroke:var(--p)}.s2{fill:var(--q);stroke:var(--q)}
+.l1{fill:var(--p)}.l2{fill:var(--q)}.tx{fill:var(--mu);font-size:12px}
+#h{fill:var(--q);stroke:#fff;stroke-width:3;cursor:grab}
+.slot{position:absolute;transform:translate(-50%,-50%);z-index:2;min-width:46px;min-height:28px;padding:0 6px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;border:2px dashed var(--mu);border-radius:8px;background:var(--cd);font-weight:700;font-size:.85rem;cursor:pointer}
+.slot:empty::before{content:"?";color:var(--mu)}
+.slot[data-v]{border:2px solid var(--p)}
+.slot.st{position:static;transform:none;display:inline-flex}
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.mini .slot.st{display:flex;margin-top:4px;min-height:40px;text-align:center;font-size:.76rem;line-height:1.15}
+.mini svg{border-radius:8px}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0}
+#qt{font-weight:600;margin:12px 0 4px}
+#ch{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;min-height:38px}
+.chip{padding:6px 14px;border:1px solid var(--p);border-radius:999px;background:var(--cd);cursor:grab;touch-action:none;user-select:none;font-weight:600}
+.chip.used{opacity:.35}
+.ghost{position:fixed;transform:translate(-50%,-50%);pointer-events:none;z-index:99;opacity:.92;box-shadow:0 4px 12px #0004}
+ul{padding-left:18px;margin:6px 0}
+ol{list-style:none;padding:0;display:grid;gap:10px}
+li.r{background:var(--cd);border:1px solid var(--bd);border-left:5px solid;border-radius:10px;padding:10px 14px}
+li.r b{display:block}.ok{border-left-color:#16a34a!important}.no{border-left-color:#dc2626!important}.mid{border-left-color:#d97706!important}
+#sc{font-size:1.4rem;font-weight:700}
+</style></head><body><main>
+
+<section id="s0">
+<h1>Ulangan Harian: Hubungan Antar Sudut</h1>
+<p class="mu">Matematika Kelas 8 · 6 soal (C1 sampai C6) · waktu 10 menit</p>
+<div class="card"><b>Ringkasan materi</b><ul>
+<li><b>Berpelurus</b>: dua sudut berjumlah 180° (pada garis lurus).</li>
+<li><b>Berpenyiku</b>: dua sudut berjumlah 90°.</li>
+<li><b>Bertolak belakang</b>: sudut berhadapan di titik potong dua garis, sama besar.</li>
+<li><b>Sehadan</b>: posisi sama pada dua garis sejajar yang dipotong transversal, sama besar.</li>
+<li><b>Dalam berseberangan</b>: di antara dua garis sejajar, beda sisi transversal, sama besar.</li>
+<li><b>Dalam sepihak</b>: di antara dua garis sejajar, satu sisi transversal, berjumlah 180°.</li>
+</ul></div>
+<label>Nama<input id="nm" placeholder="Tulis namamu" autocomplete="off"></label>
+<p class="mu">Cara mengerjakan: seret kata atau angka dari bawah gambar ke kotak bertanda ?. Ketuk kotak yang sudah terisi untuk mengosongkannya. Soal terakhir meminta kamu menggeser garis pada gambar.</p>
+<button class="go" id="st">Mulai ulangan</button>
+</section>
+
+<section id="s1" hidden>
+<div class="bar"><span id="hd"></span><span id="tmr">10:00</span></div>
+<div id="wr"></div>
+<div id="qt"></div><div class="mu" id="rd"></div>
+<div id="ch"></div>
+<button class="go" id="nx">Lanjut</button>
+</section>
+
+<section id="s2" hidden>
+<h1>Hasil</h1><div id="sc"></div>
+<p class="mu">Pembahasan tiap soal:</p><ol id="rv"></ol>
+<button class="go" onclick="location.reload()">Ulangi dari awal</button>
+</section>
+</main>
+<script>
+const $=i=>document.getElementById(i),R=Math.PI/180;
+const P=(x,y,r,f)=>[x+r*Math.cos(f*R),y-r*Math.sin(f*R)];
+const ln=(a,b,c,d)=>`<line class="ln" x1="${a}" y1="${b}" x2="${c}" y2="${d}"/>`;
+const S=s=>`<svg viewBox="0 0 400 300">${s}</svg>`;
+function arc(x,y,f1,f2,lb,c,lr=60){const a=P(x,y,36,f1),b=P(x,y,36,f2),m=P(x,y,lr,(f1+f2)/2);
+return `<path class="s${c}" fill-opacity=".3" stroke-width="1.5" d="M${x} ${y}L${a[0]} ${a[1]}A36 36 0 0 0 ${b[0]} ${b[1]}Z"/><text class="l${c}" x="${m[0]}" y="${m[1]}" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="700">${lb}</text>`}
+const vt=(t,w)=>{const d=Math.cos(t*R),m=50/Math.sin(t*R);return w=="A"?[200+d*m,100]:[200-d*m,200]};
+function par(t,arcs){const d=[Math.cos(t*R),-Math.sin(t*R)];
+let s=ln(20,100,380,100)+ln(20,200,380,200)+ln(200-d[0]*150,150-d[1]*150,200+d[0]*150,150+d[1]*150)+`<text class="tx" x="24" y="92">k</text><text class="tx" x="24" y="192">l</text>`;
+return s+arcs.map(a=>arc(...vt(t,a[0]),a[1],a[2],a[3],a[4],a[5])).join("")}
+function cross(t,arcs){const d=[Math.cos(t*R),-Math.sin(t*R)];
+return ln(30,150,370,150)+ln(200-d[0]*150,150-d[1]*150,200+d[0]*150,150+d[1]*150)+arcs.map(a=>arc(200,150,a[0],a[1],a[2],a[3])).join("")}
+function pen(t,h,la){return ln(120,250,340,250)+ln(120,250,120,40)+ln(120,250,...P(120,250,200,t))+`<path class="sq" d="M134 250V236H120"/>`+arc(120,250,0,t,la||"A",1)+arc(120,250,t,90,"B",2)+(h?`<circle id="h" cx="${P(120,250,170,t)[0]}" cy="${P(120,250,170,t)[1]}" r="13"/>`:"")}
+const sl=(x,y)=>x==null?`<div class="slot st"></div>`:`<div class="slot" style="left:${x/4}%;top:${y/3}%"></div>`;
+const at=(c,r,f1,f2)=>sl(...P(c[0],c[1],r,(f1+f2)/2));
+let td=60;
+const Q=[
+{l:"C1",n:"Mengingat",t:"Pasangkan nama hubungan sudut p dan q pada tiap gambar. Seret nama ke kotak di bawah gambar.",c:["Sehadan","Dalam berseberangan","Dalam sepihak","Bertolak belakang"],k:["Dalam berseberangan","Dalam sepihak","Sehadan"],e:"Berseberangan: di dalam dua garis sejajar dan beda sisi transversal. Sepihak: di dalam dan satu sisi transversal. Sehadan: posisi sama (kanan atas) pada garis k dan l.",
+h:()=>`<div class="tri">`+[[["A",180,245,"p",1],["B",0,65,"q",1]],[["A",245,360,"p",1],["B",0,65,"q",2]],[["A",0,65,"p",1],["B",0,65,"q",1]]].map(a=>`<div class="mini">${S(par(65,a))}${sl()}</div>`).join("")+`</div>`},
+{l:"C2",n:"Memahami",t:"Dua garis berpotongan dan sudut a = 50°. Seret nilai yang tepat ke sudut b, c, dan d (c berhadapan dengan a).",c:["50°","130°","130°","40°"],k:["130°","50°","130°"],e:"c bertolak belakang dengan a, jadi c = 50°. b dan d berpelurus dengan a, jadi 180° − 50° = 130°.",
+h:()=>S(cross(50,[[0,50,"a = 50°",1],[50,180,"",2],[180,230,"",2],[230,360,"",2]]))+at([200,150],66,50,180)+at([200,150],66,180,230)+at([200,150],66,230,360)},
+{l:"C3",n:"Menerapkan",t:"Garis k // l, p = 115°. Sudut q berseberangan dengan p, sudut r berpelurus dengan q. Seret nilai ke sudut q dan r.",c:["65°","115°","25°","75°"],k:["115°","65°"],e:"q = p = 115° (dalam berseberangan sama besar). r berpelurus dengan q, maka r = 180° − 115° = 65°.",
+h:()=>{const B=vt(115,"B");return S(par(115,[["A",180,295,"p = 115°",1],["B",0,115,"",2],["B",115,180,"",2]]))+at(B,70,0,115)+at(B,70,115,180)}},
+{l:"C4",n:"Menganalisis",t:"Garis k // l. Dua sudut dalam sepihak besarnya (2x + 20)° dan (3x − 10)°. Seret angka ke kotak nilai x dan besar kedua sudut.",c:["34","36","88°","92°","98°"],k:["34","88°","92°"],e:"Sepihak berjumlah 180°: 5x + 10 = 180, x = 34. Sudutnya 2(34) + 20 = 88° dan 3(34) − 10 = 92°.",
+h:()=>S(par(92,[["A",272,360,"(2x+20)°",2,46],["B",0,92,"(3x−10)°",1,46]]))+`<div class="row">x = ${sl()}</div><div class="row">(2x+20)° = ${sl()} (3x−10)° = ${sl()}</div>`},
+{l:"C5",n:"Mengevaluasi",t:"Andi menulis: A = 35° berpenyiku dengan B, maka B = 180° − 35° = 145°. Seret kata dan angka untuk menilai jawabannya.",c:["Benar","Salah","55°","145°"],k:["Salah","55°"],e:"Andi memakai rumus berpelurus (180°). Berpenyiku berjumlah 90°, jadi B = 90° − 35° = 55°.",
+h:()=>S(pen(35,0,"A = 35°"))+`<div class="row">Jawaban Andi: ${sl()} Seharusnya B = ${sl()}</div>`},
+{l:"C6",n:"Mencipta",t:"Seret titik oranye sehingga sudut B tepat dua kali sudut A. Setelah sesuai, tekan Selesai.",d:1,ok:v=>Math.abs(90-3*v)<=4,e:"A + B = 90° (berpenyiku) dan B = 2A, sehingga 3A = 90°: A = 30° dan B = 60°.",
+h:()=>`<svg id="fg" viewBox="0 0 400 300">${pen(td,1)}</svg>`}];
+let i=0,ans=[],left=600,tm,nm="",g=null,dr=false;
+const show=n=>["s0","s1","s2"].forEach((s,k)=>$(s).hidden=k!=n);
+function upd(){$("fg").innerHTML=pen(td,1);$("rd").textContent=`A = ${td}°, B = ${90-td}°`}
+function rq(){const q=Q[i];$("hd").textContent=`Soal ${i+1}/6 · ${q.l} ${q.n}`;$("wr").innerHTML=q.h();$("qt").textContent=q.t;
+$("ch").innerHTML=(q.c||[]).map((x,j)=>`<div class="chip" data-i="${j}">${x}</div>`).join("");
+$("nx").textContent=i==5?"Selesai":"Lanjut";$("rd").textContent="";if(q.d)upd()}
+function clr(s){if(s.dataset.ci!==undefined)$("ch").children[s.dataset.ci].classList.remove("used");delete s.dataset.ci;delete s.dataset.v;s.textContent=""}
+function put(s,ci){document.querySelectorAll(".slot").forEach(o=>{if(o.dataset.ci==ci)clr(o)});if(s.dataset.ci!==undefined)clr(s);
+const c=$("ch").children[ci];s.dataset.ci=ci;s.dataset.v=c.textContent;s.textContent=c.textContent;c.classList.add("used")}
+const mv=e=>{g.style.left=e.clientX+"px";g.style.top=e.clientY+"px"};
+$("ch").addEventListener("pointerdown",e=>{const c=e.target.closest(".chip");if(!c)return;e.preventDefault();g=c.cloneNode(true);g.className="chip ghost";g.dataset.i=c.dataset.i;document.body.appendChild(g);mv(e)});
+addEventListener("pointermove",e=>{if(g)mv(e)});
+addEventListener("pointerup",e=>{dr=false;if(!g)return;const s=document.elementFromPoint(e.clientX,e.clientY)?.closest(".slot");if(s)put(s,+g.dataset.i);g.remove();g=null});
+$("wr").onclick=e=>{const s=e.target.closest(".slot");if(s&&s.dataset.ci!==undefined)clr(s)};
+$("wr").addEventListener("pointerdown",e=>{if(e.target.id==="h"){dr=true;$("fg").setPointerCapture(e.pointerId)}});
+$("wr").addEventListener("pointermove",e=>{if(!dr)return;const r=$("fg").getBoundingClientRect(),x=(e.clientX-r.left)/r.width*400-120,y=250-(e.clientY-r.top)/r.height*300;
+td=Math.round(Math.max(10,Math.min(80,Math.atan2(y,x)/R)));upd()});
+const col=()=>{ans[i]=Q[i].d?td:[...$("wr").querySelectorAll(".slot")].map(s=>s.dataset.v||"")};
+$("nx").onclick=()=>{col();if(i<5){i++;rq()}else fin()};
+$("st").onclick=()=>{nm=$("nm").value.trim();show(1);rq();tm=setInterval(()=>{left--;$("tmr").textContent=`${Math.floor(left/60)}:${String(left%60).padStart(2,"0")}`;if(left<=0){col();fin()}},1000)};
+function fin(){clearInterval(tm);show(2);let tot=0,h="";
+Q.forEach((q,k)=>{const v=ans[k];let n=0,m=1;
+if(v!==undefined){if(q.d)n=q.ok(v)?1:0;else{m=q.k.length;n=q.k.filter((x,j)=>v[j]==x).length}}
+const s=n/m;tot+=s;
+h+=`<li class="r ${s==1?"ok":s==0?"no":"mid"}"><b>${q.l} ${q.n}: ${q.d?(s?"Benar":"Belum tepat"):`${n} dari ${m} kotak benar`}</b>${q.e}</li>`});
+$("sc").textContent=`${nm?nm+" · ":""}Nilai ${Math.round(tot/6*100)}`;$("rv").innerHTML=h}
+</script></body></html>
